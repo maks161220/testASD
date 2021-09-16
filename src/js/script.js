@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded', function(){
     'use strict';
 
-    //Часы
+    //Завдання 1. Годинник
     let dayNameHeader = document.querySelector('.day-name'),
         day = document.querySelector('.day'),
         month = document.querySelector('.month'),
@@ -40,5 +40,34 @@ window.addEventListener('DOMContentLoaded', function(){
 
         setInterval(updateTime,1000);
 
+    //Завдання 2. Зміна фону
+    let imageContainer = document.querySelector('.modal__grid'),
+        images = document.querySelectorAll('.image-grid');
+
+        imageContainer.addEventListener('click', function(e){
+            for(let i = 0; i < images.length; i++){
+                images[i].classList.remove('img-active');
+                if(e.target == images[i]){
+                    document.body.style.backgroundImage = "url('"+ images[i].src+ "')";
+                }
+            }
+            if (e.target.classList.contains('image-grid')){
+                e.target.classList.add('img-active');
+            }
+        });
+
+
+
+    //Завдання 3. Кнопка налаштування
+    let settings = document.getElementById('settings-icon'),
+        modal = document.querySelector('.modal');
+
+        settings.addEventListener('click', function() {
+            if (modal.classList.contains('no-active') == true) {
+                modal.classList.remove('no-active');
+            } else {
+                modal.classList.add('no-active');
+            }
+        });
     
 });

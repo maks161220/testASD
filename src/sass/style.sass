@@ -36,8 +36,12 @@ a
     justify-content: space-between
     align-items: center
     padding: 0 28px 0 27px
+    &__icon
+        transition: all 0.5s
+        &:hover
+            transform: scale(1.08)
 
-.mail-icon
+#mail-icon
     position: relative
     &::before
         content: '39'
@@ -58,3 +62,97 @@ a
     width: 2px
     height: 88px
     background-color: rgba(0, 0, 0, 0.7)
+
+.modal
+    margin: 160px 0 140px 120px
+    width: 670px
+    height: 580px
+    background-color: #f1f1f0
+    border-radius: 15px
+    &__header
+        height: 55px
+        background-color: #f6f5f4
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 0 13px 0 20px
+        border-radius: 15px
+    &__name
+        font-family: Arial
+        font-size: 15px
+        font-weight: bold
+        color: #636362
+    &__options
+        width: 55px
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__close, &__to-window, &__roll-up
+        background-color: #E15F57
+        border-radius: 100%
+        height: 13px
+        width: 13px
+        border: none
+        cursor: pointer
+    &__to-window
+        background-color: #EEBB3D
+    &__roll-up
+        background-color: #DCDBDA
+    &__form
+        position: relative
+        input
+            width: 160px
+            height: 30px
+            border-radius: 5px
+            background-color: #F6F5F4
+            border: 1px solid #EFEEED
+            padding-left: 30px
+        button
+            width: 26px
+            height: 26px
+            border: none
+            position: absolute
+            top: 2px
+            left: 2px
+            background-color: #F6F5F4
+            cursor: pointer
+            img
+                width: 100%
+    &__line
+        height: 2px
+        width: 100%
+        background-color: #DAD9D8
+    &__wrapper
+        width: 640px
+        height: 480px
+        background-color: #EBEBEA
+        margin: 30px 15px 0 15px
+        border-radius: 10px
+        border: 1px solid #E9E8E8
+    
+    &__grid
+        margin: 0 auto
+        margin-top: 100px
+        width: 440px
+        height: 275px
+        background-color: #fff
+        display: grid
+        grid-template-columns: repeat(4, 90px)
+        grid-template-rows: repeat(4, minmax(60px, auto))
+        grid-auto-rows: minmax(60px, auto)
+        gap: 15px
+        padding: 15px 0 0 15px
+        overflow: auto
+        &-item
+            width: 90px
+            height: 60px
+            img
+                width: 100%
+                padding: 5px
+.no-active
+    display: none
+
+.img-active
+    border: 2px solid grey
+    border-radius: 15px
+    
